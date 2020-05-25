@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nova+Script&family=Nova+Slim&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bungee&family=Pacifico&family=Rammetto+One&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bungee&family=Pacifico&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pacifico&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&family=Righteous&family=Yeseva+One&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+     <title> sai</title>
+</head>
+<body>
+
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://hdwallpaperim.com/wp-content/uploads/2017/08/24/107700-Apple_Inc.-iPhone-Nikon-iPad-technology-MacBook.jpg" style="width:100%" >
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://abduzeedo.com/sites/default/files/styles/home_cover/public/originals/photo-1539341029274-a659646db47c.jpeg?itok=xJVbDuaX" style="width:100%" >
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://hdwallpaperim.com/wp-content/uploads/2017/08/24/107700-Apple_Inc.-iPhone-Nikon-iPad-technology-MacBook.jpg" style="width:100%" >
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    <div class="dotta">
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+</div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+
+
+<h2>Image Hover Fullscreen Zoom</h2>
+<p>Hover over the image to see the zoom effect.</p>
+
+<div class="container">
+  <img src="https://images.littlefat.cn/%E7%A7%91%E6%8A%80/2018%20apple%20%E4%BA%A7%E5%93%81%E8%B4%AD%E4%B9%B0%E6%8C%87%E5%8D%97/0.2018apple%E4%BA%A7%E5%93%81%E8%B4%AD%E4%B9%B0%E6%8C%87%E5%8D%97.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+    
+
+
+
+<div id="myNav" class="overly">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" class="menu" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+
+
+
+<div class="parallax"></div>
+
+<div style="height:1000px;background-color:red;font-size:36px">
+Scroll Up and Down this page to see the parallax scrolling effect.
+This div is just here to enable scrolling.
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+</body>
+</html>
